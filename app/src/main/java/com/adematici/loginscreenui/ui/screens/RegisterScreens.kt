@@ -17,7 +17,7 @@ import com.adematici.loginscreenui.ui.theme.LightGrayColor
 import com.adematici.loginscreenui.ui.theme.PinkColor
 
 @Composable
-fun RegisterScreen(navController: NavController) {
+fun RegisterScreens(navController: NavController) {
     var fullName by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -72,10 +72,10 @@ fun RegisterScreen(navController: NavController) {
             Spacer(modifier = Modifier.weight(0.2f))
             CommonLoginButton(text = "Register", modifier = Modifier.fillMaxWidth()) {
                 if (email.isNotBlank() && password.isNotBlank() && fullName.isNotBlank()) {
-                    println("Kayit Basarili")
+                    println("Registration Successful")
                     navController.navigate("login_screen")
                 } else {
-                    println("Kayit Basarisiz")
+                    println("Registration Failed")
                 }
             }
             Spacer(modifier = Modifier.height(24.dp))

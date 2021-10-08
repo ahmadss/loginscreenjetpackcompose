@@ -15,7 +15,7 @@ import com.adematici.loginscreenui.R
 import kotlinx.coroutines.delay
 
 @Composable
-fun SplashScreen(navController: NavController) {
+fun SplashScreens(navController: NavController) {
     LaunchedEffect(key1 = true) {
         delay(800)
         navController.navigate("login_screen") {

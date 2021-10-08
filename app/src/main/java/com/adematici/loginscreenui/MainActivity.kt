@@ -11,9 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.adematici.loginscreenui.ui.screens.LoginScreen
-import com.adematici.loginscreenui.ui.screens.RegisterScreen
-import com.adematici.loginscreenui.ui.screens.SplashScreen
+import com.adematici.loginscreenui.ui.screens.*
 import com.adematici.loginscreenui.ui.theme.LoginScreenUITheme
 
 class MainActivity : ComponentActivity() {
@@ -37,13 +35,13 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "splash_screen") {
         composable("splash_screen") {
-            SplashScreen(navController = navController)
+            SplashScreens(navController = navController)
         }
         composable("login_screen") {
-            LoginScreen(navController = navController)
+            LoginScreens(navController = navController)
         }
         composable("register_screen") {
-            RegisterScreen(navController = navController)
+            RegisterScreens(navController = navController)
         }
     }
 }

@@ -19,7 +19,7 @@ import com.adematici.loginscreenui.ui.theme.LightGrayColor
 import com.adematici.loginscreenui.ui.theme.PinkColor
 
 @Composable
-fun LoginScreen(navController: NavController) {
+fun LoginScreens(navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     Surface(
@@ -70,9 +70,9 @@ fun LoginScreen(navController: NavController) {
             Spacer(modifier = Modifier.weight(0.1f))
             CommonLoginButton(text = "Login", modifier = Modifier.fillMaxWidth()) {
                 if (email == "adem" && password == "12345") {
-                    println("Giris basarili.")
+                    println("Login successful.")
                 } else {
-                    println("Giris basarisiz.")
+                    println("Login Gagal.")
                 }
             }
             Spacer(modifier = Modifier.height(24.dp))
